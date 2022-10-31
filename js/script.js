@@ -14,11 +14,12 @@ function addBooktoLibrary(name, pages){
     myLib.push(newBook);
 }
 
-function refreshScreen(){
+function refreshScreen(imgUrl){
     removeChild(library);
     myLib.forEach(function(book, i) {
         const newDiv = document.createElement("div");
         const newCover = document.createElement("div");
+        const newImage = document.createElement("img");
         const newInfo = document.createElement("div");
         const nameInfo = document.createElement("p");
         const pageInfo = document.createElement("p");
@@ -27,7 +28,9 @@ function refreshScreen(){
         const dataName = document.createElement("span");
         const dataPages = document.createElement("span");
         const deleteButton = document.createElement("button");
+        newImage.src = imgUrl;
         deleteButton.classList.add("deleteButton");
+        newCover.append(newImage);
         newDiv.classList.add("card");
         newCover.classList.add("cover");
         nameText.classList.add("static");
@@ -70,8 +73,9 @@ const library = document.getElementById("libraryMain");
 submitButton.addEventListener("click", function(){
     const bookName = document.getElementById("bookName").value;
     const bookPages = document.getElementById("bookPages").value;
+    const imgUrl = document.getElementById("imgUrl").value;
     addBooktoLibrary(bookName,bookPages);
-    refreshScreen();
+    refreshScreen(imgUrl);
     console.log(myLib);
 })
 

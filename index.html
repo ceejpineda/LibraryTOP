@@ -17,16 +17,20 @@
             <div class="forms">
                 <input class="bookForm" type="text" name="bookName" id="bookName" placeholder="Name of Book">
                 <input class="bookForm" type="number" name="bookPages" id="bookPages" placeholder="Pages">
+                <input class="bookForm" type="url" name="imgUrl" id="imgUrl" placeholder="Image URL (optional)">
+                <div>
+                    <input type="radio" name="read" id="read" value="read">
+                    <label for="read">Read</label>
+                    <input type="radio" name="read" id="notRead" value="notRead">
+                    <label for="notRead">Not Read</label>
+                </div>
                 <button id="submitButton">Add Book</button>
             </div>
         </div>
         <div id="libraryMain" class="library">
             <div class="card">
-                <div class="cover"></div>
-                <div class="info">
-                    <span class=static>Title: </span>Hello World  
-                    <span class=static>Pages: </span>350
-                     <button id="delete">Delete</button>
+                <div class="cover">
+                    <img src="./book.jpg" alt="image of a book">
                 </div>
             </div>
         </div>
