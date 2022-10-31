@@ -26,6 +26,10 @@ body{
 }
 
 .library{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    overflow: hidden;
     background-color: #9F8772;
     width: 70vw;
     height: 100vh;
@@ -43,18 +47,39 @@ body{
     align-items: center;
 }
 .card{
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: thin solid #815B5B;
+    width: 200px;
+    height: 250px;
+    margin: 30px;
+    background-color: #FFF8EA;
+    box-shadow: 20px 10px #815B5B;
+}
+.bookInfo{
+    margin: 3px;
+    font-size: 20px;
+}
+.static{
+    font-weight: 700;;
+}
+.cover{
+    width: 150px;
+    height: 150px;
+    border: thin solid black;
+    margin: 5px;
 }
 input{
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
     padding: 5px;
     
 }
 input:focus{
     outline: none;
-    -webkit-appearance: none;
-    
+    -webkit-appearance: none;  
 }
 button{
     font-size: 20px;
